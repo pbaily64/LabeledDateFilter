@@ -1,0 +1,169 @@
+{
+    "dataRoles": [
+        {
+            "displayName": "Date field",
+            "description": "Date field to filter (drag a Date field here)",
+            "name": "dateField",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "Date Label 1",
+            "description": "DAX measure for the first date label",
+            "name": "label1",
+            "kind": "Measure"
+        },
+        {
+            "displayName": "Date label 2",
+            "description": "DAX measure for the second date label",
+            "name": "label2",
+            "kind": "Measure"
+        }
+    ],
+    "objects": {
+        "general": {
+            "properties": {
+                "filter": {
+                    "type": {
+                        "filter": {}
+                    }
+                }
+            }
+        },
+        "labelStyle": {
+            "displayName": "Label style",
+            "properties": {
+                "backgroundColor": {
+                    "displayName": "Background color",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "fontColor": {
+                    "displayName": "Font color",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "fontSize": {
+                    "displayName": "Font size",
+                    "type": {
+                        "formatting": {
+                            "fontSize": true
+                        }
+                    }
+                },
+                "borderRadius": {
+                    "displayName": "Border radius (px)",
+                    "type": {
+                        "numeric": true
+                    }
+                },
+                "defaultLabel1": {
+                    "displayName": "Default label (date 1)",
+                    "type": {
+                        "text": true
+                    }
+                },
+                "defaultLabel2": {
+                    "displayName": "Default label (date 2)",
+                    "type": {
+                        "text": true
+                    }
+                }
+            }
+        },
+        "dateStyle": {
+            "displayName": "Date style",
+            "properties": {
+                "fontColor": {
+                    "displayName": "Font color",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "fontSize": {
+                    "displayName": "Font size",
+                    "type": {
+                        "formatting": {
+                            "fontSize": true
+                        }
+                    }
+                },
+                "showTwoDatePickers": {
+                    "displayName": "Display two date pickers",
+                    "type": {
+                        "bool": true
+                    }
+                },
+                "horizontalLayout": {
+                    "displayName": "Horizontal layout (side-by-side)",
+                    "type": {
+                        "bool": true
+                    }
+                },
+                "dateFormat": {
+                    "displayName": "Date display format.",
+                    "type": {
+                        "text": true
+                    }
+                }
+            }
+        }
+    },
+    "dataViewMappings": [
+        {
+            "conditions": [
+                {
+                    "dateField": {
+                        "max": 1
+                    },
+                    "label1": {
+                        "max": 1
+                    },
+                    "label2": {
+                        "max": 1
+                    }
+                }
+            ],
+            "categorical": {
+                "categories": {
+                    "for": {
+                        "in": "dateField"
+                    },
+                    "dataReductionAlgorithm": {
+                        "top": {
+                            "count": 30000
+                        }
+                    }
+                },
+                "values": {
+                    "select": [
+                        {
+                            "bind": {
+                                "to": "label1"
+                            }
+                        },
+                        {
+                            "bind": {
+                                "to": "label2"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "privileges": []
+}

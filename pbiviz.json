@@ -1,0 +1,25 @@
+{
+    "visual": {
+        "name": "labeledDateFilter",
+        "displayName": "Labeled Date Filter",
+        "guid": "labeledDateFilterD39304CD1980483DB4A67FF5C3395A2D",
+        "visualClassName": "Visual",
+        "version": "1.2.2.0",
+        "description": "Date(s) picker with customizable labels via DAX",
+        "supportUrl": "https://powerbi.microsoft.com",
+        "gitHubUrl": "https://github.com"
+    },
+    "apiVersion": "5.3.0",
+    "author": {
+        "name": "Baily Patrick",
+        "email": "patrick.baily@nn.be"
+    },
+    "assets": {
+        "icon": "assets/icon.png"
+    },
+    "externalJS": null,
+    "style": "style/visual.less",
+    "capabilities": "capabilities.json",
+    "dependencies": null,
+    "stringResources": []
+}
