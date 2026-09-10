@@ -1,17 +1,18 @@
 {
-  "name": "visual",
-  "description": "Labeled Date Filter - date picker with DAX labels",
+  "name": "labeled-date-filter",
+  "description": "Power BI custom visual - one or two date pickers with DAX-driven labels",
   "version": "1.2.3.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com"
+    "url": "https://github.com/pbaily64/LabeledDateFilter.git"
   },
   "license": "MIT",
   "scripts": {
     "pbiviz": "pbiviz",
     "start": "pbiviz start",
     "package": "pbiviz package && powershell -ExecutionPolicy Bypass -File ./scripts/del_move.ps1",
-    "lint": "npx eslint ."
+    "lint": "npx eslint .",
+    "eslint": "npx eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
     "powerbi-visuals-api": "^5.11.0",

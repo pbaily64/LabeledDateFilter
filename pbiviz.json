@@ -7,7 +7,7 @@
         "version": "1.2.3.0",
         "description": "Date(s) picker with customizable labels via DAX",
         "supportUrl": "https://powerbi.microsoft.com",
-        "gitHubUrl": "https://github.com"
+        "gitHubUrl": "https://github.com/pbaily64/LabeledDateFilter"
     },
     "apiVersion": "5.11.0",
     "author": {
